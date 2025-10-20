@@ -1,13 +1,28 @@
+@font-face {
+  font-family: 'Gabarito';
+  src: url('../Gabarito-VariableFont_wght.ttf');
+}
+
 :root {
-  --header_logo_background_color-github: #282828; /* Color picked from the logo background */
-  --header_logo_background_color-logo: #0d1117; /* Color picked from the github background */
+  /*YT-DLP COLOR*/
+  --background_color-logo: #282828; /* Color picked from the logo background */
+  /*--button_background_color-logo: #535252;
+  --button_border_color-logo: #373737;*/
+
+  /*GITHUB COLOR*/
+  --background_color-github: #0d1117; /* Color picked from the github background */
+  /*--button_background_color-github: #2a3543;
+  --button_border_color-github: #1e283c;
+  --input_background_color-github: #374854;
+  --input_border_color-github: #161f32;*/
 }
 
 body {
-  background-color: var(--header_logo_background_color-logo);
+  background-color: var(--background_color-github);
   color: white;
+  font-family: 'Gabarito';
   padding-left: 5px;
-  padding-right: 5px;
+  padding-right: 15px;
 }
 
 header {
@@ -18,4 +33,46 @@ header {
 #header_logo {
   width: 550px;
   height: auto;
+}
+
+h1 {
+  margin-bottom: 5px;
+}
+
+input[type="button"] {
+  display: none;
+}
+
+.file_input {
+  border: 2px solid white;
+  border-radius: 10px;
+  background-color: var(--background_color-github);
+  display: inline-block;
+  padding: 6px 20px;
+  margin-left: 5px;
+  cursor: pointer;
+  text-align: center;
+}
+
+#output_div {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+#output_path_text {
+  color: white;
+  border: 2px solid white;
+  border-radius: 10px;
+  background-color: var(--input_background_color-github);
+  width: 100%;
+  height: 30px;
+}
+
+#command_view_text {
+  color: white;
+  border: 1px solid white;
+  border-radius: 0px;
+  background-color: var(--input_background_color-github);
+  width: 100%;
+  height: 45px;
 }

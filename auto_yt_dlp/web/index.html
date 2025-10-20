@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <!--<meta http-equiv="refresh" content="5"> <!--? This is to see the updates i make on the file live -->
+  <!--<meta http-equiv="refresh" content="2"> <!--? This is to see the updates i make on the file live -->
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Auto Youtube Video/Audio Downloader Plus</title> 
+  <title>Auto Youtube Audio/Video Downloader Plus</title> 
   <link rel="icon" href="favicon.ico" sizes="16x16" type="image/x-icon">
   <link rel="icon" href="favicon.ico" sizes="32x32" type="image/x-icon">
   <link rel="icon" href="favicon.ico" sizes="64x64" type="image/x-icon">
   <link rel="icon" href="favicon.ico" sizes="128x128" type="image/x-icon">
   <link rel="icon" href="favicon.ico" sizes="256x256" type="image/x-icon">
   <link rel="stylesheet" href="styles/main.css">
-  <script defer type="text/javascript" src="/eel.js"></script>
   <script defer type="text/javascript" src="scripts/checker.js"></script>
+  <script defer type="text/javascript" src="scripts/dialog.js"></script>
 </head>
 <body>
   <header>
@@ -22,7 +22,18 @@
 
   <section id="output-section">
     <h1>Output Directory</h1>
-    <input id="OutputPath1" type="text">
+    <div id="output_div">
+      <input id="output_path_text" type="text">
+      <label for="output_path_browse" class="file_input">
+        Browse
+        <input id="output_path_browse" type="button">
+      </label>
+    </div>
+  </section>
+
+  <section id="commnand_view-section">
+    <h1>Command Prompt</h1>
+    <textarea id="command_view_text">python -m yt_dlp</textarea>
   </section>
 </body>
 </html>

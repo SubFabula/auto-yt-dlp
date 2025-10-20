@@ -1,6 +1,8 @@
 ### DevStuff ###
 _backup
 *._inAct_*
+eel.js
+*.log
 
 ### Python ###
 # Byte-compiled / optimized / DLL files
@@ -19,6 +21,7 @@ venv.bak/
 
 ### VisualStudioCode ###
 .vscode/*
+.vscode*
 *.code-workspace
 !.vscode/settings.json
 !.vscode/tasks.json
