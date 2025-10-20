@@ -20,6 +20,7 @@ If you want to test this yourself at the current state, just do this:
 
 # TODO
 - [x] Make the app launch-able from CMD.
-- [ ] Make the app and CMD exit together. (Currently, the app gets automaticly exited if CMD is closed (after like a second of the app being launched or it wont work (and still doesn't work sometimes)))
-- [ ] Desing the UI.
-- [ ] Make the app input CMD codes and run it (after the UI is done, somewhat).
+- [x] Make the app and CMD exit together. 
+- [x] Desing the UI(WIP but whatever).
+- [ ] Make the app input CMD codes and run it (after the UI is done, somewhat, which is now).
+- [ ] Add every other option of [`yt-dlp`](https://github.com/yt-dlp/yt-dlp) (after getting the CMD to work from Python without issues).
