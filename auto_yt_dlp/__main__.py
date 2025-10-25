@@ -1,5 +1,5 @@
 import logging
-from auto_yt_dlp import __version__, config
+from auto_yt_dlp import __version__, config, utils
 
 #LOGGING
 logger = logging.getLogger()
@@ -18,8 +18,9 @@ logger_filehandler = logging.FileHandler(
      encoding=config.LOGGING_ENCODING
      )
 
+formatter = logging.Formatter(config.LOGGING_FORMAT)
+
 if config.LOGGING_TO_FILE == True:
-  formatter = logging.Formatter(config.LOGGING_FORMAT)
   logger_filehandler.setFormatter(formatter)
   logger.addHandler(logger_filehandler)
 elif config.LOGGING_TO_FILE == False:
@@ -33,13 +34,14 @@ if config.LOGGING_TO_CONSOLE == True:
 elif config.LOGGING_TO_CONSOLE == False:
   logger.removeHandler(logger_consolehandler)
 
+logger = logging.getLogger(__name__)
 
 #__MAIN__
 def run():
-  from auto_yt_dlp import ui # Importing it here so that it doesnt start logging before `__main__.py`
+  from auto_yt_dlp import ui # Importing it here so that it doesn't start logging before `__main__.py` is done with the `LOGGING` part
   ui.start()
 
 if __name__ == "__main__":
-  logging.info("___APP IS STARTING___")
-  logging.debug(f'config.ROOT: {config.ROOT}')
+  logger.info(f"___APP IS STARTING___({__version__})")
+  logger.debug(f'config.ROOT: {config.ROOT}')
   run()

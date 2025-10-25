@@ -1,8 +1,8 @@
 ### DevStuff ###
 _backup
 *._inAct_*
-eel.js
 *.log
+pyproject.toml
 
 ### Python ###
 # Byte-compiled / optimized / DLL files
