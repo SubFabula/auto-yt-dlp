@@ -14,32 +14,32 @@
 ## How do i use it?
 For now, just follow these steps to use this app. (I will figure out how to put this to PyPi when i have some free time.)
 
-1. Download just the [`auto_yt_dlp`](https://github.com/SubFabula/auto-yt-dlp/tree/main/auto_yt_dlp) module to your machine.
+1. Download the [`auto-yt-dlp`](https://github.com/SubFabula/auto-yt-dlp/archive/refs/heads/main.zip) repository and get `auto_yt_dlp` the module to your machine.
 
 2. Assuming you have [`Python`](https://www.python.org/downloads), locate your `Python` folder, and then go into the `libs` folder (the separate one would also do if you have that).
 
-3. Now, put the downloaded module into the `libs`. And open command prompt `(Ctrl + R -> cmd)`.
+3. Now, put the module into the `libs` folder.
 
-4. If everything is working as indented, when you enter `python -m auto_yt_dlp` in the command prompt, the app wil start.
+5. If everything is working as indented, whenever you open Command Prompt `(Ctrl + R -> cmd)` and enter `python -m auto_yt_dlp` in the command prompt, the app wil start.
 
 > [!NOTE]
-> Note that if you get any errors in the Command Output, it's probably something to do with [`yt-dlp`](https://github.com/yt-dlp/yt-dlp) or the way you wrote your URL or Output Path.
+> Note that if you get any errors in the Command Output in the app, it's probably something to do with [`yt-dlp`](https://github.com/yt-dlp/yt-dlp) or the way you wrote your URL or Output Path.
 
-> [!WARN]
+> [!IMPORTANT]
 > If you are manually setting your path, dont forget to write the file name and extention at the end of the folder directroy.
 
-Example:
-`C:\Users\\[USERNAME]\Desktop\\[FILE_NAME].[FILE_EXTENTION]`
+Example: `C:\Users\[USERNAME]\Desktop\[FILE_NAME].[FILE_EXTENTION]`
 
-Another example:
-`C:\Users\myPC\Desktop\FunnyVideo.mp4`
+Another example: `C:\Users\myPC\Desktop\FunnyVideo.mp4`
+
+The app will automaticly turn any `/` into `\` for the Output Directory since [`yt-dlp`](https://github.com/yt-dlp/yt-dlp) doesn't accept output paths with "/".
 
 ## Can i contribute to this?
-Yes, you can. ^And also thanks, i really appreciate it :D
+Yes, you can. (And also thanks, i really appreciate it :D)
 
 How?
 
-In whatever you think you can by adding any missing features (by forking it), telling me any mistakes/errors an whatnot from the [issiues](https://github.com/SubFabula/auto-yt-dlp/issues) or localizing it to your native language or to the ones you know (just make a fork and translate it. I will do the in-app language settings stuff later.)
+In whatever you think you can by adding any missing features (by [forking](https://github.com/SubFabula/auto-yt-dlp/fork) it), telling me any mistakes/errors an whatnot from the [issues](https://github.com/SubFabula/auto-yt-dlp/issues) or localizing it to your native language or to the ones you know (just make a fork and translate it. I will do the in-app language settings stuff later.)
 
 # TODO
 - [x] Make the app launch-able from CMD.
