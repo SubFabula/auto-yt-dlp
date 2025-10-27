@@ -1,8 +1,15 @@
 from setuptools import setup, find_packages
-from auto_yt_dlp.__init__ import __version__
 
 with open('README.md', 'r') as f:
   description = f.read()
+
+with open('auto_yt_dlp/__init__.py', 'r') as f:
+  M__init__ = f.read()
+  # __version__Index = M__init__.index('"') + 1
+  # __version__EndIndex = M__init__.index('"', __version__Index)
+  M__init__Split = M__init__.split()
+  __version__ = M__init__Split[2]
+  print(__version__)
 
 setup(
   name='auto-yt-dlp',
