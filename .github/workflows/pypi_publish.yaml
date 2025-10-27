@@ -1,7 +1,7 @@
 name: pypi_publish
 
 env:
-  PACKAGE_NAME: "auto-yt-dlp"
+  PACKAGE_NAME: "auto_yt_dlp"
   OWNER: "SubFabula"
 
 on:

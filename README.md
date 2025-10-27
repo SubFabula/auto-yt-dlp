@@ -5,7 +5,7 @@
 # Content
 - [Can i contribute to this?](https://github.com/SubFabula/auto-yt-dlp?tab=readme-ov-file#can-i-contribute-to-this)
 - [Report an Issue!](https://github.com/SubFabula/auto-yt-dlp?tab=readme-ov-file#report-an-issue)
-  - [Before Reporting...](https://github.com/SubFabula/auto-yt-dlp?tab=readme-ov-file#before-reporting...)
+  - [Before Reporting...](https://github.com/SubFabula/auto-yt-dlp?tab=readme-ov-file#before-reporting)
 - [Other Q&As](https://github.com/SubFabula/auto-yt-dlp/discussions/new/choose)
 
 ## Can i contribute to this?
@@ -24,14 +24,14 @@ You can report any problems from right __[here](https://github.com/SubFabula/aut
 
 ### Before Reporting...
 > [!NOTE]
-> Note that if you get any errors in the Command Output in the app, it's probably something to do with [`yt-dlp`](https://github.com/yt-dlp/yt-dlp) or the way you wrote your `URL` or `Output Path`.
+> If you get any errors in the Command Output in the app, it's probably something to do with [`yt-dlp`](https://github.com/yt-dlp/yt-dlp) or the way you wrote your `URL` or `Output Path`.
 
 > [!IMPORTANT]
 > If you are manually setting your path, don't forget to write the file name and extension at the end of the folder directory. <br>
 > Example: `C:\Users\[USERNAME]\Desktop\[FILE_NAME].[FILE_EXTENSION]`<br>
 > Another example: `C:\Users\myPC\Desktop\FunnyVideo.mp4`<br>
 > <br>
-> If you want to keep the audio/video's title and extention, just set the `Output Path` by browsing. Or, you can just put `%(title)s.%(ext)s` where you would put your file name and extension.<br>
+> If you want to keep the audio/video's title and extention, just set the `Output Path` by browsing (the `Browse` button) or, you can just put `%(title)s.%(ext)s` where you would put your file name and extension.<br>
 > <br>
 > The app will automatically turn any `/` into `\` for the Output Directory since [`yt-dlp`](https://github.com/yt-dlp/yt-dlp) doesn't accept `Output Path`s with`/`.
 
