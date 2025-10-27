@@ -39,7 +39,7 @@ jobs:
   publish-to-pypi:
     name: >-
       Publish Python distribution to PyPI
-    if: github.ref matches '^refs/tags/[0-9]+\.[0-9]+\.[0-9]+(\.[0-9]+|.(post|rc|b|a|dev)[0-9]+)?$'  # only publish to PyPI on tag pushes
+    if: (github.ref matches '^refs/tags/[0-9]+\.[0-9]+\.[0-9]+(\.[0-9]+|.(post|rc|b|a|dev)[0-9]+)?$')  # only publish to PyPI on tag pushes
     needs:
     - build
     runs-on: ubuntu-latest
