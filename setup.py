@@ -19,6 +19,7 @@ setup(
   install_requires=[
     'yt-dlp',
     'pywebview',
+    'pythonnet>=3.0.0'
   ],
   entry_points={
     'console_scripts': [

@@ -1,5 +1,5 @@
 [build-system]
-requires = ["setuptools>=67.8.0", "wheel", "pythonnet>=3.0.0"]
+requires = ["setuptools>=67.8.0", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
@@ -12,6 +12,7 @@ description = '"A feature-rich command-line audio/video downloader" "...with a s
 dependencies = [
   "yt-dlp",
   "pywebview",
+  "pythonnet>=3.0.0",
 ]
 
 [project.scripts] # This doesn't work for whatever reason.
