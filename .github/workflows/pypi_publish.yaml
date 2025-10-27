@@ -89,32 +89,3 @@ jobs:
       uses: pypa/gh-action-pypi-publish@release/v1
       with:
         repository-url: https://test.pypi.org/legacy/
-
-
-
-* Creating isolated environment: venv+pip...
-* Installing packages in isolated environment:
-  - setuptools
-  - wheel
-Traceback (most recent call last):
-* Getting build dependencies for sdist...
-  File "/home/runner/.local/lib/python3.13/site-packages/pyproject_hooks/_in_process/_in_process.py", line 389, in <module>
-    main()
-    ~~~~^^
-  File "/home/runner/.local/lib/python3.13/site-packages/pyproject_hooks/_in_process/_in_process.py", line 373, in main
-    json_out["return_val"] = hook(**hook_input["kwargs"])
-                             ~~~~^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/home/runner/.local/lib/python3.13/site-packages/pyproject_hooks/_in_process/_in_process.py", line 317, in get_requires_for_build_sdist
-    return hook(config_settings)
-  File "/tmp/build-env-6spr9__0/lib/python3.13/site-packages/setuptools/build_meta.py", line 334, in get_requires_for_build_sdist
-    return self._get_build_requires(config_settings, requirements=[])
-           ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/tmp/build-env-6spr9__0/lib/python3.13/site-packages/setuptools/build_meta.py", line 301, in _get_build_requires
-    self.run_setup()
-    ~~~~~~~~~~~~~~^^
-  File "/tmp/build-env-6spr9__0/lib/python3.13/site-packages/setuptools/build_meta.py", line 317, in run_setup
-    exec(code, locals())
-    ~~~~^^^^^^^^^^^^^^^^
-  File "<string>", line 2, in <module>
-ModuleNotFoundError: No module named 'auto_yt_dlp'
-ERROR Backend subprocess exited when trying to invoke get_requires_for_build_sdist
