@@ -13,13 +13,15 @@ jobs:
   build:
     name: Build distribution
     runs-on: ubuntu-latest
+    outputs:
+      tag_match: ${{ steps.tag-regex.outputs.match }}
 
     steps:
     - uses: actions/checkout@v4
       with:
         persist-credentials: false
 
-    - name: Actions Ecosystem Action Regex Match
+    - name: Check if tags math a version
       uses: actions-ecosystem/action-regex-match@v2.0.2
       id: tag-regrex
       with:
@@ -46,8 +48,8 @@ jobs:
 
   publish-to-pypi:
     name: >-
-      Publish Python distribution to PyPI
-    if: ${{ needs.build.steps.tag-regrex.outputs.match != '' }}  # only publish to PyPI on tag pushes
+      Publish Py dist to PyPI
+    if: ${{ needs.build.outputs.tag_match != '' }}  # only publish to PyPI on tag pushes
     needs:
     - build
     runs-on: ubuntu-latest
@@ -58,7 +60,7 @@ jobs:
       id-token: write  # IMPORTANT: mandatory for trusted publishing
 
     steps:
-    - name: Download all the dists
+    - name: Download all dists
       uses: actions/download-artifact@v4
       with:
         name: python-package-distributions
@@ -67,7 +69,7 @@ jobs:
       uses: pypa/gh-action-pypi-publish@release/v1
 
   publish-to-testpypi:
-    name: Publish Python distribution to TestPyPI
+    name: Publish Py dist to TestPyPI
     needs:
     - build
     runs-on: ubuntu-latest
@@ -80,12 +82,12 @@ jobs:
       id-token: write  # IMPORTANT: mandatory for trusted publishing
 
     steps:
-    - name: Download all the dists
+    - name: Download all dists
       uses: actions/download-artifact@v4
       with:
         name: python-package-distributions
         path: dist/
-    - name: Publish distribution to TestPyPI
+    - name: Publish dist to TestPyPI
       uses: pypa/gh-action-pypi-publish@release/v1
       with:
         repository-url: https://test.pypi.org/legacy/
