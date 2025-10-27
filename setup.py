@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 
 with open('README.md', 'r') as f:
-  description = f.read()
+  longdescription = f.read()
 
 with open('auto_yt_dlp/__init__.py', 'r') as f:
   M__init__ = f.read()
@@ -14,7 +14,9 @@ with open('auto_yt_dlp/__init__.py', 'r') as f:
 setup(
   name='auto-yt-dlp',
   version=__version__,
+  author='SubFabula'
   packages=find_packages(),
+  python_requires='>=3.8'
   include_package_data=True,
   install_requires=[
     'yt-dlp',
@@ -27,6 +29,8 @@ setup(
       'auto_yt_dlp = auto_yt_dlp:run',
     ],
   },
-  long_description=description,
+  description = '"A feature-rich command-line audio/video downloader" "...with a simple graphical interface".'
+  long_description=longdescription,
   long_description_content_type='text/markdown',
+  url='https://github.com/SubFabula/auto-yt-dlp',
 )
