@@ -14,7 +14,7 @@ with open('auto_yt_dlp/__init__.py', 'r') as f:
 setup(
   name='auto-yt-dlp',
   version=__version__,
-  author='SubFabula'
+  author='SubFabula',
   packages=find_packages(),
   python_requires='>=3.8'
   include_package_data=True,
