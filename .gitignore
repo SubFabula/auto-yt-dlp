@@ -2,7 +2,9 @@
 _backup
 *._inAct_*
 *.log
-pyproject.toml
+dist
+build
+*.egg-info
 
 ### Python ###
 # Byte-compiled / optimized / DLL files

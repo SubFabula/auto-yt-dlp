@@ -1,7 +1,7 @@
 import webview
 import os
 import logging
-from auto_yt_dlp import config, utils
+from . import config, utils
 
 logger = logging.getLogger(__name__)
 

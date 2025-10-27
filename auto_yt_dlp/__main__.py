@@ -1,5 +1,10 @@
+try:
+  import webview, yt_dlp
+except ModuleNotFoundError as e:
+  raise f"Please install PyWebView and Yt-Dlp modules for this app to work!\n{e}\n\nDo this in the console:\npython -m pip install pywebview\npython -m pip install yt-dlp"
+
 import logging
-from auto_yt_dlp import __version__, config, utils
+from . import __version__, config, utils
 
 #LOGGING
 logger = logging.getLogger()
@@ -38,7 +43,7 @@ logger = logging.getLogger(__name__)
 
 #__MAIN__
 def run():
-  from auto_yt_dlp import ui # Importing it here so that it doesn't start logging before `__main__.py` is done with the `LOGGING` part
+  from . import ui # Importing it here so that it doesn't start logging before `__main__.py` is done with the `LOGGING` part
   ui.start()
 
 if __name__ == "__main__":

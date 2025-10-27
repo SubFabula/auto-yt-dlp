@@ -16,7 +16,7 @@ LOGGING_FILE_NAME = os.path.join(ROOT, r'auto_yt_dlp.log')
 LOGGING_ENCODING='utf-8'
 LOGGING_LEVEL='DEBUG'
 LOGGING_FILEMOD='a'
-LOGGING_FORMAT='%(asctime)s [%(levelname)s] [%(name)s/%(module)s.py: %(funcName)s()/%(lineno)d] | %(message)s'
+LOGGING_FORMAT='%(asctime)s [%(levelname)s] [%(name)s/%(module)s.py: %(funcName)s().%(lineno)d] | %(message)s'
 
 #UI OPTIONS
 WIDTH=650

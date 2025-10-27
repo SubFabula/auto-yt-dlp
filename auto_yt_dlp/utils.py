@@ -2,7 +2,7 @@ import logging
 import subprocess
 import webview
 import json
-from auto_yt_dlp import __version__, config
+from . import __version__, config
 
 logger = logging.getLogger(__name__)
 
