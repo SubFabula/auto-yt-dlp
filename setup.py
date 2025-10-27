@@ -8,8 +8,8 @@ with open('auto_yt_dlp/__init__.py', 'r') as f:
   # __version__Index = M__init__.index('"') + 1
   # __version__EndIndex = M__init__.index('"', __version__Index)
   M__init__Split = M__init__.split()
-  __version__ = M__init__Split[2]
-  print(__version__)
+  __version__ = M__init__Split[2].strip('"')
+  print(f'From `setup.py`: {__version__}')
 
 setup(
   name='auto-yt-dlp',
