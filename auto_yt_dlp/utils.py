@@ -39,6 +39,6 @@ def runCMD(cmd):
 
     logger.info(f'cmdOutput/jsLineOpen: {jsLineOpen}')
     window.evaluate_js(f'document.getElementById("command_output_text").value += `{jsLineOpen}`;'
-                       'window.scrollBy(0, 100);')
+                       'window.scrollBy(0, 10000);')
     
   logger.info('`runCMD` process has finished!')

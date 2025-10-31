@@ -1,5 +1,7 @@
 import logging
 import importlib
+import shutil
+import subprocess
 from . import __version__, config
 
 #LOGGING
@@ -62,6 +64,12 @@ def run():
     if PySide6__version__ == "6.8.0": # Check PySide6 Version
       print(f'Please install the right version of the following module for the app to work as indented; PySide6>6.8.0\n\nDo this in the console to upgrade module:\npython -m pip install --upgrade "PySide>6.8.0"\n')
       assert PySide6__version__ == "6.8.0"
+
+  if shutil.which("ffmpeg"):
+    pass
+  else:
+    print("`ffmpeg` wasn't found! Automatically installing `ffmpeg`!")
+    subprocess.run("winget install ffmpeg")
 
   from . import ui # Importing it here so that it doesn't start logging before `__main__.py` is done with the `LOGGING` part
   ui.start()

@@ -40,5 +40,5 @@ You can report any problems from right __[here](https://github.com/SubFabula/aut
 - [x] Make the app and CMD exit together.
 - [x] Design the UI in a re-usable way.
 - [x] Make the app input CMD codes and run it.
-- [ ] Upload to PyPi for others to be able to access it easily(WIP).
+- [x] Upload to PyPi for others to be able to access it easily.
 - [ ] Add every other option of [`yt-dlp`](https://github.com/yt-dlp/yt-dlp).

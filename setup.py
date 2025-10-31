@@ -21,12 +21,13 @@ setup(
   install_requires=[
     'yt-dlp',
     'pywebview',
+    'ffmpeg',
   ],
   extras_require={
-        'gui': [
-            'qtpy',
-            'PySide6>=6.9.0',
-        ],
+    'gui': [
+        'qtpy',
+        'PySide6>=6.9.0',
+    ],
   },
   entry_points={
     'console_scripts': [

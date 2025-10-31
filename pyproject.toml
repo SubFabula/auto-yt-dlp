@@ -12,12 +12,13 @@ description = '"A feature-rich command-line audio/video downloader" "...with a s
 dependencies = [
   "yt-dlp",
   "pywebview",
+  "ffmpeg",
 ]
 
 [project.optional-dependencies]
 gui = [
-    "qtpy",
-    "PySide6>=6.9.0",
+  "qtpy",
+  "PySide6>=6.9.0",
 ]
 
 [project.scripts] # This doesn't work for whatever reason.
