@@ -13,7 +13,7 @@ Yes, you can. (And also thanks, i really appreciate it :D)
 
 How?
 
-In whatever you think you can by adding any missing features (by [forking](https://github.com/SubFabula/auto-yt-dlp/fork) it), telling me any mistakes/errors an whatnot from the [issues](https://github.com/SubFabula/auto-yt-dlp/issues) or localizing it to your native language or to the ones you know (just make a fork and translate it. I will do the in-app language settings stuff later.)
+In whatever you think you can by adding any missing features (by [forking](https://github.com/SubFabula/auto-yt-dlp/fork) it), telling me any mistakes/errors an whatnot from the [issues](https://github.com/SubFabula/auto-yt-dlp/issues/new) (check the ["Report an Issue!"](https://github.com/SubFabula/auto-yt-dlp?tab=readme-ov-file#report-an-issue) title first!) or localizing it to your native language or to the ones you know (just make a fork and translate it. I will do the in-app language settings stuff later.)
 
 ## Report an Issue!
 > [!NOTE]
@@ -40,5 +40,5 @@ You can report any problems from right __[here](https://github.com/SubFabula/aut
 - [x] Make the app and CMD exit together.
 - [x] Design the UI in a re-usable way.
 - [x] Make the app input CMD codes and run it.
-- [x] Upload to PyPi for others to be able to access it easily.
+- [ ] Upload to PyPi for others to be able to access it easily(WIP).
 - [ ] Add every other option of [`yt-dlp`](https://github.com/yt-dlp/yt-dlp).

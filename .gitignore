@@ -5,7 +5,6 @@ _backup
 dist
 build
 *.egg-info
-pyproject.toml
 
 ### Python ###
 # Byte-compiled / optimized / DLL files

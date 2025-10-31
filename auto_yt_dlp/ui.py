@@ -2,6 +2,8 @@ import webview
 import os
 import logging
 from . import config, utils
+if config.QTPY == True:
+  import qtpy
 
 logger = logging.getLogger(__name__)
 
@@ -74,4 +76,20 @@ def start():
   window.state.DEBUG = config.DEBUG
   window.state.LOGGING = config.LOGGING
 
-  webview.start(bulk_func, {window}, ssl=False, gui="qt", icon=ICO_PATH, debug=config.DEBUG)
+  if config.QTPY == True:
+    try: # Try Qt
+      webview.start(bulk_func, {window}, ssl=False, gui="qt", icon=ICO_PATH, debug=config.DEBUG)
+    except qtpy.PythonQtError or qtpy.QtBindingsNotFoundError as e:
+      print(f"Qt isn't working! Switching to EdgeChromium!\n{e}")
+
+      if e == qtpy.PythonQtError or e == qtpy.QtBindingsNotFoundError: # Switch to EdgeChromium if Qt isn't working
+        try:
+          webview.start(bulk_func, {window}, ssl=False, gui="edgechromium", icon=ICO_PATH, debug=config.DEBUG)
+        except RuntimeError as e:
+          raise f"EdgeChromium isn't working! Switching to any available viewer!\n{e}"
+
+  if config.QTPY != True: # Use EdgeChromium if Qt doesn't exist
+    try:
+      webview.start(bulk_func, {window}, ssl=False, gui="edgechromium", icon=ICO_PATH, debug=config.DEBUG)
+    except RuntimeError as e:
+      raise f"EdgeChromium isn't working! Switching to any available viewer!\n{e}"

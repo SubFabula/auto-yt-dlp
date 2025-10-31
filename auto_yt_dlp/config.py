@@ -19,6 +19,7 @@ LOGGING_FILEMOD='a'
 LOGGING_FORMAT='%(asctime)s [%(levelname)s] [%(name)s/%(module)s.py: %(funcName)s().%(lineno)d] | %(message)s'
 
 #UI OPTIONS
+QTPY=False # Automatically set to `True` if it exist
 WIDTH=650
 HEIGHT=670
 
@@ -26,7 +27,7 @@ HEIGHT=670
 if LOGGING == True and LOGGING_TO_CONSOLE == False and LOGGING_TO_FILE == False:
   print("`LOGGING` is ACTIVE!\nBut `LOGGING_TO_CONSOLE` and `LOGGING_TO_FILE` is NOT ACTIVE!")
 
-if LOGGING==False:
+if LOGGING == False:
   LOGGING_TO_CONSOLE=False
   LOGGING_TO_FILE=False
 elif LOGGING_TO_CONSOLE == False and LOGGING_TO_FILE == False:

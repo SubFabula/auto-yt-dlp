@@ -1,10 +1,6 @@
-try:
-  import webview, yt_dlp
-except ModuleNotFoundError as e:
-  raise f"Please install PyWebView and Yt-Dlp modules for this app to work!\n{e}\n\nDo this in the console:\npython -m pip install pywebview\npython -m pip install yt-dlp"
-
 import logging
-from . import __version__, config, utils
+import importlib
+from . import __version__, config
 
 #LOGGING
 logger = logging.getLogger()
@@ -43,6 +39,30 @@ logger = logging.getLogger(__name__)
 
 #__MAIN__
 def run():
+  try: # Check the requirements
+    import webview, yt_dlp
+  except ModuleNotFoundError as e:
+    print(f"Please install missing modules from the following; PyWebView and Yt-Dlp modules for this app to work\n\nDo this in the console for whichever module is missing:\npython -m pip install pywebview\npython -m pip install yt-dlp\n")
+    raise e
+
+  if importlib.util.find_spec('qtpy'):
+    config.QTPY = True
+    try: # Check PySide6
+      from PySide6 import __version__ as PySide6__version__
+    except ModuleNotFoundError as e:
+      print(f'Please install the missing module from the following for the app to work as indented; PySide6\n\nDo this in the console for the missing module:\npython -m pip install "PySide>=6.9.0"\n{e}')
+  
+  try:
+    PySide6__version__
+  except UnboundLocalError:
+    PySide6__version__ = None
+    pass
+
+  if PySide6__version__ != None:
+    if PySide6__version__ == "6.8.0": # Check PySide6 Version
+      print(f'Please install the right version of the following module for the app to work as indented; PySide6>6.8.0\n\nDo this in the console to upgrade module:\npython -m pip install --upgrade "PySide>6.8.0"\n')
+      assert PySide6__version__ == "6.8.0"
+
   from . import ui # Importing it here so that it doesn't start logging before `__main__.py` is done with the `LOGGING` part
   ui.start()
 

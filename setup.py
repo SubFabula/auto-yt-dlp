@@ -9,7 +9,7 @@ with open('auto_yt_dlp/__init__.py', 'r') as f:
   # __version__EndIndex = M__init__.index('"', __version__Index)
   M__init__Split = M__init__.split()
   __version__ = M__init__Split[2].strip('"')
-  print(f'----FROM `setup.py`: {__version__}----')
+  print(f'----FROM `setup.py`: {__version__}----') # For the workflow console
 
 setup(
   name='auto-yt-dlp',
@@ -21,8 +21,13 @@ setup(
   install_requires=[
     'yt-dlp',
     'pywebview',
-    'pythonnet>=3.0.0',
   ],
+  extras_require={
+        'gui': [
+            'qtpy',
+            'PySide6>=6.9.0',
+        ],
+  },
   entry_points={
     'console_scripts': [
       'auto-yt-dlp = auto_yt_dlp:run',

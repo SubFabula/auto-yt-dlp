@@ -1,6 +1,7 @@
 setuptools>=67.8.0
 wheel
 twine
-pythonnet>=3.0.0
 yt-dlp
 pywebview
+qtpy
+PySide6>6.8.0
