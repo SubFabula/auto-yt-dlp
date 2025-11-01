@@ -15,7 +15,7 @@
 
 # Showcase
 <p align="center">
-    <img src="appshowcase.gif" alt="Simple Showcase" style="width: 450px; height: 500px; object-fit: cover;">
+    <img src="https://raw.githubusercontent.com/SubFabula/auto-yt-dlp/refs/heads/main/appshowcase.gif" alt="Simple Showcase" height="500px">
 </p>
 
 # Content
