@@ -33,7 +33,7 @@ setup(
     'yt-dlp',
     'pywebview',
     'qtpy',
-    'PySide6>=6.9.0',
+    'PySide6>=6.10.0',
   ],
   entry_points={
     'console_scripts': [
