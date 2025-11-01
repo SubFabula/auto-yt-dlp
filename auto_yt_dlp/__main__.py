@@ -57,7 +57,6 @@ def run():
   try:
     PySide6__version__
   except UnboundLocalError:
-    PySide6__version__ = None
     pass
 
   if PySide6__version__ != None:
@@ -65,11 +64,11 @@ def run():
       print(f'Please install the right version of the following module for the app to work as indented; PySide6>6.8.0\n\nDo this in the console to upgrade module:\npython -m pip install --upgrade "PySide>6.8.0"\n')
       assert PySide6__version__ == "6.8.0"
 
-  if shutil.which("ffmpeg"):
+  if shutil.which("ffmpeg"): # `ffmpeg` for `yt-dlp`
     pass
   else:
     print("`ffmpeg` wasn't found! Automatically installing `ffmpeg`!")
-    subprocess.run("winget install ffmpeg")
+    subprocess.run("winget install ffmpeg") #? Should i add a `(Y/n)` option?
 
   from . import ui # Importing it here so that it doesn't start logging before `__main__.py` is done with the `LOGGING` part
   ui.start()

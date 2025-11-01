@@ -15,27 +15,35 @@ setup(
   name='auto-yt-dlp',
   version=__version__,
   author='SubFabula',
-  packages=find_packages(),
-  python_requires='>=3.8',
+  keywords=['gui', 'media-downloader'],
+  packages=['auto_yt_dlp'],
+  python_requires='==3.13',
+  classifiers=[
+    'License :: OSI Approved :: MIT License',
+    'Programming Language :: Python :: 3.13',
+    'Operating System :: Microsoft :: Windows',
+  ],
   include_package_data=True,
   install_requires=[
     'yt-dlp',
     'pywebview',
+    'qtpy',
+    'PySide6>=6.9.0',
   ],
-  extras_require={
-    'gui': [
-        'qtpy',
-        'PySide6>=6.9.0',
-    ],
-  },
   entry_points={
     'console_scripts': [
-      'auto-yt-dlp = auto_yt_dlp:run',
-      'auto_yt_dlp = auto_yt_dlp:run',
+      'autoytdlp = auto_yt_dlp.__main__:run',
+      'auto-yt-dlp = auto_yt_dlp.__main__:run',
+      'auto_yt_dlp = auto_yt_dlp.__main__:run',
     ],
   },
   description = '"A feature-rich command-line audio/video downloader" "...with a simple graphical interface".',
   long_description=longdescription,
   long_description_content_type='text/markdown',
   url='https://github.com/SubFabula/auto-yt-dlp',
+  project_urls={
+    'Source Code': 'https://github.com/SubFabula/auto-yt-dlp',
+    'Bug Tracker': 'https://github.com/SubFabula/auto-yt-dlp/issues',
+    'Q&A': 'https://github.com/SubFabula/auto-yt-dlp/discussions',
+  },
 )

@@ -1,9 +1,25 @@
-![applook](https://raw.githubusercontent.com/SubFabula/auto-yt-dlp/refs/heads/main/applook.png)
+<h1 align="center">Auto Youtube Audio/Video Downloader Plus</h1>
+<p align="center"><em>"A feature-rich command-line audio/video downloader" "...with a simple graphical interface".</em></p>
 
-"A feature-rich command-line audio/video downloader" "...with a simple graphical interface".
+<p align="center">
+    <img src="https://raw.githubusercontent.com/SubFabula/auto-yt-dlp/refs/heads/main/applook.png" alt="Base Look" height="500px">
+</p>
+
+<p align="center">
+    <a href="https://pypi.org/project/auto-yt-dlp/"><img src="https://img.shields.io/pypi/v/auto-yt-dlp.svg" alt="PyPI Version"></a>
+    <a href="https://pypi.org/project/auto-yt-dlp/"><img src="https://img.shields.io/pypi/pyversions/auto-yt-dlp.svg" alt="PyPI Supported Versions"></a>
+    <a href="https://pypi.org/project/auto-yt-dlp/"><img src="https://img.shields.io/pypi/l/auto-yt-dlp.svg" alt="License"></a>
+    <a href="https://pepy.tech/project/auto-yt-dlp"><img src="https://static.pepy.tech/badge/auto-yt-dlp/month" alt="Downloads Per Month"></a>
+    <a href="https://pyinstaller.readthedocs.io/en/stable/requirements.html"><img src="https://img.shields.io/badge/platform-windows-lightgrey" alt="Supported Platforms"></a>
+</p>
+
+# Showcase
+<p align="center">
+    <img src="appshowcase.gif" alt="Simple Showcase" style="width: 450px; height: 500px; object-fit: cover;">
+</p>
 
 # Content
-- [How to Install & Use](https://github.com/SubFabula/auto-yt-dlp?tab=readme-ov-file#how-to-install-&-use)
+- [How to Install & Use](https://github.com/SubFabula/auto-yt-dlp?tab=readme-ov-file#how-to-install--use)
 - [Can i contribute to this?](https://github.com/SubFabula/auto-yt-dlp?tab=readme-ov-file#can-i-contribute-to-this)
 - [Report an Issue!](https://github.com/SubFabula/auto-yt-dlp?tab=readme-ov-file#report-an-issue)
   - [Before Reporting...](https://github.com/SubFabula/auto-yt-dlp?tab=readme-ov-file#before-reporting)
