@@ -37,7 +37,7 @@ Run these commands in the command prompt/terminal:
 2. Run `python -m auto_yt_dlp` or just `auto-yt-dlp`/`auto_yt_dlp` to start the app
 
 ### 2. Download the `.exe`
-> [!INFO]
+> [!NOTE]
 > This is work in progress.
 #### Requirements
 - A working computer ¯\\_\(ツ)\_/¯
