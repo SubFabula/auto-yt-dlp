@@ -28,7 +28,7 @@
 ## How to Install & Use
 ### [1. PyPi Installation](https://pypi.org/project/auto-yt-dlp)
 #### Requirements
-- [`Python 3.8`](https://www.python.org/downloads) or higher
+- [`Python 3.10`](https://www.python.org/downloads) or higher
 
 #### Installation & Usage
 Run these commands in the command prompt/terminal:
@@ -49,7 +49,7 @@ Just put the `.exe` file wherever and double click on it to start it.
 
 ### 3. Github Download
 #### Requirements
-- [`Python 3.8`](https://www.python.org/downloads) or higher
+- [`Python 3.10`](https://www.python.org/downloads) or higher
 
 #### Installation & Usage
 Follow these steps to download and use the app.
