@@ -17,9 +17,10 @@ setup(
   author='SubFabula',
   keywords=['gui', 'media-downloader'],
   packages=['auto_yt_dlp'],
-  python_requires='==3.13',
+  python_requires='3.13',
+  license="The Unlicense (Unlicense)"
   classifiers=[
-    'License :: OSI Approved :: MIT License',
+    'License :: OSI Approved :: The Unlicense (Unlicense)',
     'Programming Language :: Python :: 3.13',
     'Operating System :: Microsoft :: Windows',
   ],

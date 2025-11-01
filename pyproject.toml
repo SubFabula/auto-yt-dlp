@@ -10,9 +10,10 @@ name = "auto-yt-dlp"
 authors = [{name = "SubFabula"}]
 keywords = ["gui", "media-downloader"]
 dynamic = ["version"]
-requires-python = "==3.13"
+requires-python = "3.13"
+license = "The Unlicense (Unlicense)"
 classifiers = [
-    "License :: OSI Approved :: MIT License",
+    "License :: OSI Approved :: The Unlicense (Unlicense)",
     "Programming Language :: Python :: 3.13",
     "Operating System :: Microsoft :: Windows",
 ]
