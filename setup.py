@@ -18,7 +18,8 @@ setup(
   keywords=['gui', 'media-downloader'],
   packages=['auto_yt_dlp'],
   python_requires='==3.13',
-  license="The Unlicense (Unlicense)",
+  license="Unlicense",
+  license_files=["LICENSE"],
   classifiers=[
     'License :: OSI Approved :: The Unlicense (Unlicense)',
     'Programming Language :: Python :: 3.13',
