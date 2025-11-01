@@ -18,7 +18,7 @@ setup(
   keywords=['gui', 'media-downloader'],
   packages=['auto_yt_dlp'],
   python_requires='3.13',
-  license="The Unlicense (Unlicense)"
+  license="The Unlicense (Unlicense)",
   classifiers=[
     'License :: OSI Approved :: The Unlicense (Unlicense)',
     'Programming Language :: Python :: 3.13',
@@ -38,7 +38,7 @@ setup(
       'auto_yt_dlp = auto_yt_dlp.__main__:run',
     ],
   },
-  description = '"A feature-rich command-line audio/video downloader" "...with a simple graphical interface".',
+  description='"A feature-rich command-line audio/video downloader" "...with a simple graphical interface".',
   long_description=longdescription,
   long_description_content_type='text/markdown',
   url='https://github.com/SubFabula/auto-yt-dlp',
