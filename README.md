@@ -3,10 +3,45 @@
 "A feature-rich command-line audio/video downloader" "...with a simple graphical interface".
 
 # Content
+- [How to Install & Use](https://github.com/SubFabula/auto-yt-dlp?tab=readme-ov-file#how-to-install-&-use)
 - [Can i contribute to this?](https://github.com/SubFabula/auto-yt-dlp?tab=readme-ov-file#can-i-contribute-to-this)
 - [Report an Issue!](https://github.com/SubFabula/auto-yt-dlp?tab=readme-ov-file#report-an-issue)
   - [Before Reporting...](https://github.com/SubFabula/auto-yt-dlp?tab=readme-ov-file#before-reporting)
 - [Other Q&As](https://github.com/SubFabula/auto-yt-dlp/discussions/new/choose)
+
+## How to Install & Use
+### [1. PyPi Installation](https://pypi.org/project/auto-yt-dlp)
+#### Requirements
+- [`Python 3.8`](https://www.python.org/downloads) or higher
+
+#### Installation & Usage
+Run these commands in the command prompt/terminal:
+
+1. Run `python -m pip install auto-yt-dlp` to install.
+2. Run `python -m auto_yt_dlp` or just `auto-yt-dlp`/`auto_yt_dlp` to start the app
+
+### 2. Download the `.exe`
+> [!INFO]
+> This is work in progress.
+#### Requirements
+- A working computer ¯\\_\(ツ)\_/¯
+
+#### Installation & Usage
+You can head to the [releases](https://github.com/SubFabula/auto-yt-dlp/releases/latest) section and download the standalone version of the app!
+
+Just put the `.exe` file wherever and double click on it to start it.
+
+### 3. Github Download
+#### Requirements
+- [`Python 3.8`](https://www.python.org/downloads) or higher
+
+#### Installation & Usage
+Follow these steps to download and use the app.
+
+1. Clone/download the repository.
+2. Open command prompt/terminal and `cd` into the project's root folder.
+3. Run `python -m pip install -r requirements.txt`
+4. Run `python -m auto_yt_dlp` to run the application
 
 ## Can i contribute to this?
 Yes, you can. (And also thanks, i really appreciate it :D)

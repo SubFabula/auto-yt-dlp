@@ -86,10 +86,10 @@ def start():
         try:
           webview.start(bulk_func, {window}, ssl=False, gui="edgechromium", icon=ICO_PATH, debug=config.DEBUG)
         except RuntimeError as e:
-          raise f"EdgeChromium isn't working! Switching to any available viewer!\n{e}"
+          print(f"EdgeChromium isn't working! Switching to any available viewer!\n{e}")
 
   if config.QTPY != True: # Use EdgeChromium if Qt doesn't exist
     try:
       webview.start(bulk_func, {window}, ssl=False, gui="edgechromium", icon=ICO_PATH, debug=config.DEBUG)
     except RuntimeError as e:
-      raise f"EdgeChromium isn't working! Switching to any available viewer!\n{e}"
+      print(f"EdgeChromium isn't working! Switching to any available viewer!\n{e}")

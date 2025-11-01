@@ -21,7 +21,6 @@ setup(
   install_requires=[
     'yt-dlp',
     'pywebview',
-    'ffmpeg',
   ],
   extras_require={
     'gui': [
