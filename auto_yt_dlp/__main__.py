@@ -2,6 +2,7 @@ import logging
 import importlib
 import shutil
 import subprocess
+import sys
 from . import __version__, config
 
 #LOGGING
@@ -74,6 +75,9 @@ def run():
   ui.start()
 
 if __name__ == "__main__":
-  logger.info(f"___APP IS STARTING___({__version__})")
+  logger.info("___AUTO-YT-DLP___")
+  logger.info(f"AUTO-YT-DLP VERSION: {__version__}")
+  logger.info(f"PYTHON VERSION: {sys.version}")
   logger.debug(f'config.ROOT: {config.ROOT}')
   run()
+  logger.info("‾‾‾AUTO-YT-DLP‾‾‾")

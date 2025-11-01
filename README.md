@@ -2,7 +2,7 @@
 <p align="center"><em>"A feature-rich command-line audio/video downloader" "...with a simple graphical interface".</em></p>
 
 <p align="center">
-    <img src="https://raw.githubusercontent.com/SubFabula/auto-yt-dlp/refs/heads/main/applook.png" alt="Base Look" height="500px">
+    <img src="https://raw.githubusercontent.com/SubFabula/auto-yt-dlp/main/applook.png" alt="Base Look" height="500px">
 </p>
 
 <p align="center">
@@ -15,7 +15,7 @@
 
 # Showcase
 <p align="center">
-    <img src="https://raw.githubusercontent.com/SubFabula/auto-yt-dlp/refs/heads/main/appshowcase.gif" alt="Simple Showcase" height="500px">
+    <img src="https://raw.githubusercontent.com/SubFabula/auto-yt-dlp/main/appshowcase.gif" alt="Simple Showcase" height="500px">
 </p>
 
 # Content
