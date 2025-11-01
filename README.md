@@ -9,7 +9,7 @@
     <a href="https://pypi.org/project/auto-yt-dlp/"><img src="https://img.shields.io/pypi/v/auto-yt-dlp.svg" alt="PyPI Version"></a>
     <a href="https://pypi.org/project/auto-yt-dlp/"><img src="https://img.shields.io/pypi/pyversions/auto-yt-dlp.svg" alt="PyPI Supported Versions"></a>
     <a href="https://pypi.org/project/auto-yt-dlp/"><img src="https://img.shields.io/pypi/l/auto-yt-dlp.svg" alt="License"></a>
-    <a href="https://pepy.tech/project/auto-yt-dlp"><img src="https://static.pepy.tech/badge/auto-yt-dlp/month" alt="Downloads Per Month"></a>
+    <a href="https://pepy.tech/project/auto-yt-dlp"><img src="https://static.pepy.tech/personalized-badge/auto-yt-dlp?period=total&units=INTERNATIONAL_SYSTEM&left_color=GRAY&right_color=BLUE&left_text=installs%2Fmonth" alt="Installs Per Month"></a>
     <a href="https://pyinstaller.readthedocs.io/en/stable/requirements.html"><img src="https://img.shields.io/badge/platform-windows-lightgrey" alt="Supported Platforms"></a>
 </p>
 
