@@ -6,11 +6,13 @@
 </p>
 
 <p align="center">
-    <a href="https://pypi.org/project/auto-yt-dlp/"><img src="https://img.shields.io/pypi/v/auto-yt-dlp.svg" alt="PyPI Version"></a>
-    <a href="https://pypi.org/project/auto-yt-dlp/"><img src="https://img.shields.io/pypi/pyversions/auto-yt-dlp.svg" alt="PyPI Supported Versions"></a>
-    <a href="https://pypi.org/project/auto-yt-dlp/"><img src="https://img.shields.io/pypi/l/auto-yt-dlp.svg" alt="License"></a>
-    <a href="https://pepy.tech/project/auto-yt-dlp"><img src="https://static.pepy.tech/personalized-badge/auto-yt-dlp?period=total&units=INTERNATIONAL_SYSTEM&left_color=GRAY&right_color=BLUE&left_text=installs%2Fmonth" alt="Installs Per Month"></a>
-    <a href="https://pyinstaller.readthedocs.io/en/stable/requirements.html"><img src="https://img.shields.io/badge/platform-windows-lightgrey" alt="Supported Platforms"></a>
+    <a href="https://pypi.org/project/auto-yt-dlp/"><img src="https://img.shields.io/pypi/v/auto-yt-dlp?pypiBaseUrl=https%3A%2F%2Fpypi.org&logo=pypi&logoSize=auto&label=PyPi&labelColor=%23000000&color=GREEN" alt="PyPI Version"></a>
+    <a href="https://test.pypi.org/project/auto-yt-dlp/"><img src="https://img.shields.io/pypi/v/auto-yt-dlp?pypiBaseUrl=https%3A%2F%2Ftest.pypi.org&logo=pypi&logoSize=auto&label=TestPyPi&labelColor=%23000000&color=%23f17e3f" alt="TestPyPi Version"></a>
+    <a href="https://pypi.org/project/auto-yt-dlp/"><img src="https://img.shields.io/pypi/pyversions/auto-yt-dlp?pypiBaseUrl=https%3A%2F%2Fpypi.org&logo=python&logoSize=auto&label=Python%20Versions&labelColor=%23000000&color=%230c59d4" alt="PyPI Supported Versions"></a>
+    <a href="https://pepy.tech/project/auto-yt-dlp"><img src="https://img.shields.io/pypi/dm/auto-yt-dlp?logoSize=auto&label=PyPi%20Installs&labelColor=%23000000&color=%230c59d4" alt="PyPi Installs Per Month"></a>
+    <a href="https://github.com/SubFabula/auto-yt-dlp/releases/latest"><img src="https://img.shields.io/github/downloads/SubFabula/auto-yt-dlp/latest/total?logo=github&logoSize=auto&label=Standalone%20Downloads&labelColor=%23000000&color=%236406b2" alt="Standalone Installs Per Month"></a>
+    <a href="https://pypi.org/project/auto-yt-dlp/"><img src="https://img.shields.io/pypi/l/auto-yt-dlp?pypiBaseUrl=https%3A%2F%2Fpypi.org&logo=Unlicense&logoSize=auto&label=License&labelColor=%23000000&color=%235c5c5c" alt="License"></a>
+    <a href="https://pyinstaller.readthedocs.io/en/stable/requirements.html"><img src="https://img.shields.io/badge/platforms-Windows-lightgray?label=Platforms&labelColor=%23000000&color=%239f9f9f" alt="Supported Platforms"></a>
 </p>
 
 # Showcase
@@ -20,6 +22,9 @@
 
 # Content
 - [How to Install & Use](https://github.com/SubFabula/auto-yt-dlp?tab=readme-ov-file#how-to-install--use)
+  1. [PyPi Installation](https://github.com/SubFabula/auto-yt-dlp/edit/main/README.md#1-pypi-installation)
+  2. [Standalone (`.exe`) Downloading](https://github.com/SubFabula/auto-yt-dlp/edit/main/README.md#2-standalone-exe-downloading)
+  3. [Github Download](https://github.com/SubFabula/auto-yt-dlp/edit/main/README.md#3-github-download)
 - [Can i contribute to this?](https://github.com/SubFabula/auto-yt-dlp?tab=readme-ov-file#can-i-contribute-to-this)
 - [Report an Issue!](https://github.com/SubFabula/auto-yt-dlp?tab=readme-ov-file#report-an-issue)
   - [Before Reporting...](https://github.com/SubFabula/auto-yt-dlp?tab=readme-ov-file#before-reporting)
@@ -34,13 +39,13 @@
 Run these commands in the command prompt/terminal:
 
 1. Run `python -m pip install auto-yt-dlp` to install.
-2. Run `python -m auto_yt_dlp` or just `auto-yt-dlp`/`auto_yt_dlp` to start the app
+2. Run `python -m auto_yt_dlp` or just `autoytdlp`/`auto-yt-dlp`/`auto_yt_dlp` to start the app.
 
-### 2. Download the `.exe`
+### 2. Standalone (`.exe`) Downloading
 > [!NOTE]
 > This is work in progress.
 #### Requirements
-- A working computer ¯\\_\(ツ)\_/¯
+- A working computer that can run `.exe` files ¯\\_\(ツ)\_/¯
 
 #### Installation & Usage
 You can head to the [releases](https://github.com/SubFabula/auto-yt-dlp/releases/latest) section and download the standalone version of the app!
