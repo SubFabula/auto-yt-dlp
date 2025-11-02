@@ -33,7 +33,7 @@ def bulk_func(window):
 def on_before_show(window):
   logger.debug(f'window.native: {window.native}')
 
-def on_initiliaze(renderer):
+def on_initialize(renderer):
   print("The app will stop working once it or the command prompt is closed/exited.\nTo stop all processes, press Ctrl + C.")
   logger.debug(f'GUI is initialized with the renderer {renderer}')
 
@@ -68,7 +68,7 @@ def start():
     )
 
   window.events.before_show += on_before_show
-  window.events.initialized += on_initiliaze
+  window.events.initialized += on_initialize
   window.events.resized += on_resize
   window.events.closed += on_close
 

@@ -5,6 +5,7 @@ _backup
 dist
 build
 *.egg-info
+_test*
 
 ### Python ###
 # Byte-compiled / optimized / DLL files

@@ -24,7 +24,8 @@ def open_file_dialog():
 def runCMD(cmd):
   window = webview.windows[0]
   logger.info(f'cmd: {cmd}')
-  cmdOutput = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True)
+  subprocess.Popen('echo To stop the download process, press "Ctrl + C" in the terminal.', shell=True)
+  cmdOutput = subprocess.Popen(cmd, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True, shell=True)
 
   for pyLine in cmdOutput.stdout:
     if config.LOGGING_DETAIL == True:
@@ -40,5 +41,6 @@ def runCMD(cmd):
     logger.info(f'cmdOutput/jsLineOpen: {jsLineOpen}')
     window.evaluate_js(f'document.getElementById("command_output_text").value += `{jsLineOpen}`;'
                        'window.scrollBy(0, 10000);')
-    
+  
+  subprocess.Popen('echo Download process has ended!', shell=True)
   logger.info('`runCMD` process has finished!')

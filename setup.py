@@ -5,11 +5,9 @@ with open('README.md', 'r') as f:
 
 with open('auto_yt_dlp/__init__.py', 'r') as f:
   M__init__ = f.read()
-  # __version__Index = M__init__.index('"') + 1
-  # __version__EndIndex = M__init__.index('"', __version__Index)
   M__init__Split = M__init__.split()
   __version__ = M__init__Split[2].strip('"')
-  print(f'----FROM `setup.py`: {__version__}----') # For the workflow console
+  print(f'----FROM `setup.py`: __version__ = {__version__}----') # For the workflow console
 
 setup(
   name='auto-yt-dlp',

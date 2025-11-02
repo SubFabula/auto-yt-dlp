@@ -1,0 +1,74 @@
+#name: standalone_release
+#
+#env:
+#  PACKAGE_NAME: 'auto_yt_dlp'
+#  OWNER: 'SubFabula'
+#
+#on:
+#  push:
+#    tags:
+#      - '[0-9]+.[0-9]+.[0-9]+.post[0-9]+'
+#      - '[0-9]+.[0-9]+.[0-9]+'
+#      - '[0-9]+.[0-9]+.[0-9]+.rc[0-9]+'
+#      - '[0-9]+.[0-9]+.[0-9]+.b[0-9]+'
+#      - '[0-9]+.[0-9]+.[0-9]+.a[0-9]+'
+#      - '[0-9]+.[0-9]+.[0-9]+.dev[0-9]+'
+#
+#jobs:
+#  build:
+#    name: Convert to executable
+#    runs-on: ubuntu-latest
+#
+#    steps:
+#    - uses: actions/checkout@v4 # not sure if i need this...
+#      with:
+#        persist-credentials: false # nor this, probably not
+#
+#    - name: Set up Python
+#      uses: actions/setup-python@v5
+#      with:
+#        python-version: '>=3.8'
+#    - name: Install pyinstaller
+#      run: >-
+#        python3 -m
+#        pip install
+#        pyinstaller
+#        --user
+#    - name: Create Standalone Executable
+#      run: python3 -m PyInstaller
+#    - name: Store the Standalone Executable
+#      uses: actions/upload-artifact@v4
+#      with:
+#        name: 
+#        path: 
+#    - name: Create Dependent Executable
+#      run: python3 -m PyInstaller
+#    - name: Store the Standalone Executable
+#      uses: actions/upload-artifact@v4
+#      with:
+#        name: 
+#        path: 
+#
+#  create-a-release:
+#    name: >-
+#      Create a GitHub Release
+#    needs:
+#    - build
+#    runs-on: ubuntu-latest
+#
+#    steps:
+#    - name: Get the Standalone Executable
+#      uses: actions/download-artifact@v4
+#      with:
+#        name: 
+#        path: 
+#    - name: Publish Standalone with Release
+#      uses: pypa/gh-action-pypi-publish@release/v1
+#
+#    - name: Get the Dependent Executable
+#      uses: actions/download-artifact@v4
+#      with:
+#        name: 
+#        path: 
+#    - name: Publish Dependent with Release
+#      uses: 
