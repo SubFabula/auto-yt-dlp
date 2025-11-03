@@ -12,7 +12,7 @@
     <a href="https://pepy.tech/project/auto-yt-dlp"><img src="https://img.shields.io/pypi/dm/auto-yt-dlp?logoSize=auto&label=PyPi%20Installs&labelColor=%23000000&color=%230c59d4" alt="PyPi Installs Per Month"></a>
     <a href="https://github.com/SubFabula/auto-yt-dlp/releases/latest"><img src="https://img.shields.io/github/downloads-pre/SubFabula/auto-yt-dlp/latest/total?logo=github&logoSize=auto&label=Standalone%20Downloads&labelColor=%23000000&color=%236406b2" alt="Standalone Installs Per Month"></a>
     <a href="https://pypi.org/project/auto-yt-dlp/"><img src="https://img.shields.io/pypi/l/auto-yt-dlp?pypiBaseUrl=https%3A%2F%2Fpypi.org&logo=Unlicense&logoSize=auto&label=License&labelColor=%23000000&color=%235c5c5c" alt="License"></a>
-    <a href="https://pyinstaller.readthedocs.io/en/stable/requirements.html"><img src="https://img.shields.io/badge/platforms-Windows-lightgray?label=Platforms&labelColor=%23000000&color=%239f9f9f" alt="Supported Platforms"></a>
+    <img src="https://img.shields.io/badge/platforms-Windows-lightgray?label=Platforms&labelColor=%23000000&color=%239f9f9f" alt="Supported Platforms">
 </p>
 
 # Showcase
