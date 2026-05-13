@@ -15,7 +15,7 @@ logger.debug(f'ICO_PATH: {ICO_PATH}')
 
 # Start with the app
 def echo():
-   logger.debug("Functions have been exposed from Python.")
+  logger.debug("Functions have been exposed from Python.")
 
 def expose(window):
   window.expose(echo)  # expose a function during the runtime
@@ -34,7 +34,7 @@ def on_before_show(window):
   logger.debug(f'window.native: {window.native}')
 
 def on_initialize(renderer):
-  print("The app will stop working once it or the command prompt is closed/exited.\nTo stop all processes, press Ctrl + C.")
+  print('The app will stop working once it or the command prompt is closed/exited.\nTo stop all processes, press "Ctrl + C."')
   logger.debug(f'GUI is initialized with the renderer {renderer}')
 
 def on_resize(window, width, height):
@@ -44,8 +44,8 @@ def on_resize(window, width, height):
   logger.debug(f'Default size has been applied {config.WIDTH} x {config.HEIGHT}'.format(width=config.WIDTH, height=config.HEIGHT))
 
 def on_close():
-    print('Window is closed!')
-    logger.info('Window is closed!')
+  print('Window is closed!')
+  logger.info('Window is closed!')
 
 # Start the app
 def start():
@@ -72,9 +72,12 @@ def start():
   window.events.resized += on_resize
   window.events.closed += on_close
 
-  window.expose(utils.open_file_dialog, utils.runCMD)
+  window.expose(utils.open_file_dialog, utils.runCMD, utils.openDownload_sDirect)
   window.state.DEBUG = config.DEBUG
   window.state.LOGGING = config.LOGGING
+  window.state.kill_runCMD = False
+  window.state.runCMD_is = False
+  window.state.isItFolder = True
 
   if config.QTPY == True:
     try: # Try Qt

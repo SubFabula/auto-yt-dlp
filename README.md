@@ -2,7 +2,7 @@
 <p align="center"><em>"A feature-rich command-line audio/video downloader" "...with a simple graphical interface".</em></p>
 
 <p align="center">
-    <img src="https://raw.githubusercontent.com/SubFabula/auto-yt-dlp/main/applook.png" alt="Base Look" height="500px">
+    <a href="https://raw.githubusercontent.com/SubFabula/auto-yt-dlp/main/applook.png"><img src="https://raw.githubusercontent.com/SubFabula/auto-yt-dlp/main/applook.png" alt="Base Look" height="500px"></a>
 </p>
 
 <p align="center">
@@ -10,14 +10,15 @@
     <a href="https://test.pypi.org/project/auto-yt-dlp/"><img src="https://img.shields.io/pypi/v/auto-yt-dlp?pypiBaseUrl=https%3A%2F%2Ftest.pypi.org&logo=pypi&logoSize=auto&label=TestPyPi&labelColor=%23000000&color=%23f17e3f" alt="TestPyPi Version"></a>
     <a href="https://pypi.org/project/auto-yt-dlp/"><img src="https://img.shields.io/pypi/pyversions/auto-yt-dlp?pypiBaseUrl=https%3A%2F%2Fpypi.org&logo=python&logoSize=auto&label=Python%20Versions&labelColor=%23000000&color=%230c59d4" alt="PyPI Supported Versions"></a>
     <a href="https://pepy.tech/project/auto-yt-dlp"><img src="https://img.shields.io/pypi/dm/auto-yt-dlp?logoSize=auto&label=PyPi%20Installs&labelColor=%23000000&color=%230c59d4" alt="PyPi Installs Per Month"></a>
+    <a href="https://github.com/SubFabula/auto-yt-dlp/releases/latest"><img src="https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2FSubFabula%2Fauto-yt-dlp%2Frefs%2Fheads%2Fmain%2Fversionfile.json&query=version&style=flat&logo=Github&logoSize=auto&label=Standalone%20Latest%20Version&labelColor=000000&color=6406b2" alt="Standalone Version"></a>
     <a href="https://github.com/SubFabula/auto-yt-dlp/releases/latest"><img src="https://img.shields.io/github/downloads-pre/SubFabula/auto-yt-dlp/latest/total?logo=github&logoSize=auto&label=Standalone%20Downloads&labelColor=%23000000&color=%236406b2" alt="Standalone Installs Per Month"></a>
     <a href="https://pypi.org/project/auto-yt-dlp/"><img src="https://img.shields.io/pypi/l/auto-yt-dlp?pypiBaseUrl=https%3A%2F%2Fpypi.org&logo=Unlicense&logoSize=auto&label=License&labelColor=%23000000&color=%235c5c5c" alt="License"></a>
-    <a href="https://pyinstaller.readthedocs.io/en/stable/requirements.html"><img src="https://img.shields.io/badge/platforms-Windows-lightgray?label=Platforms&labelColor=%23000000&color=%239f9f9f" alt="Supported Platforms"></a>
+    <img src="https://img.shields.io/badge/platforms-Windows-lightgray?label=Platforms&labelColor=%23000000&color=%239f9f9f" alt="Supported Platforms">
 </p>
 
 # Showcase
 <p align="center">
-    <img src="https://raw.githubusercontent.com/SubFabula/auto-yt-dlp/main/appshowcase.gif" alt="Simple Showcase" height="500px">
+    <a href="https://github.com/SubFabula/auto-yt-dlp/blob/main/appshowcase.gif"><img src="https://raw.githubusercontent.com/SubFabula/auto-yt-dlp/main/appshowcase.gif" alt="Simple Showcase" height="500px"></a>
 </p>
 
 # Content
@@ -95,4 +96,8 @@ You can report any problems from right __[here](https://github.com/SubFabula/aut
 - [x] Design the UI in a re-usable way.
 - [x] Make the app input CMD codes and run it.
 - [x] Upload to PyPi for others to be able to access it easily.
-- [ ] Add every other option of [`yt-dlp`](https://github.com/yt-dlp/yt-dlp).
+- [ ] Rewrite the app using the [`yt-dlp API`](https://github.com/yt-dlp/yt-dlp/blob/master/yt_dlp/YoutubeDL.py) instead of using the terminal.
+- [ ] ~~Fix the executable version of the app.~~
+- [ ] ~~Add a preview of the entered URL for the user to see what they are downloading.~~
+- [ ] ~~Add a settings option and more.~~
+- [ ] ~~Add every other option of [`yt-dlp`](https://github.com/yt-dlp/yt-dlp).~~

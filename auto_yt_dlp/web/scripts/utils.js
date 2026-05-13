@@ -69,21 +69,114 @@ export async function update_URLCMDview(CMDviewer, inputURL, oPathEndIndex_CMDvi
   console.debug("`update_URLCMDview()` has ended!")
 }
 
-export async function runCMD(CMDviewer, CMDrun, CMDrunStyle, CMDoutput, CMDoutputH1) {
+async function runCMD_await(CMDrun, CMDrunStyle) {
+  console.debug("`runCMD_await()` has been called!")
+
+  console.debug("`pywebview.state.runCMD_isRunning` is ", pywebview.state.runCMD_isRunning)
+  console.debug("`CMDrun.dataset.running` is ", CMDrun.dataset.running)
+
+  CMDrunStyle.innerText = 'Stop Downloading | Downloading';
+  
+  await new Promise((resolve) => {
+    const animation = setInterval(() => {
+      console.debug("`Downloading...` animation playing...")
+      console.debug("`CMDrunStyle.innerText` is ", CMDrunStyle.innerText)
+      if (CMDrunStyle.innerText == 'Stop Downloading | Downloading...') {
+        CMDrunStyle.innerText = 'Stop Downloading | Downloading';
+      }
+
+      CMDrunStyle.innerText += '.'
+
+      if (!pywebview.state.runCMD_isRunning || CMDrun.dataset.running == "false") {
+        console.debug("`Downloading...` animation stopping...")
+        clearInterval(animation)
+        console.debug("resolve")
+        resolve
+      }
+    }, 2000); // 2sec
+    
+  })
+
+  CMDrunStyle.innerText = 'Download the Audio/Video File';
+
+  console.debug("`pywebview.state.runCMD_isRunning` is ", pywebview.state.runCMD_isRunning)
+  console.debug("`CMDrun.dataset.running` is ", CMDrun.dataset.running)
+
+  console.debug("`runCMD_await()` has ended!")
+}
+
+async function runCMD_clear(clear_CMDoutput, c_CMDo, openDownload, CMDoutput, CMDoutputH1) {
+  console.debug("`runCMD_clear()` has been called!")
+
+  clear_CMDoutput.style.display = 'block';
+  openDownload.style.display = 'block';
+
+  await c_CMDo
+
+  CMDoutput.value = '';
+  CMDoutput.display = 'none';
+  CMDoutputH1.display = 'none';
+
+  clear_CMDoutput.style.display = 'none';
+  openDownload.style.display = 'none';
+
+  console.debug("`runCMD_clear()` has ended!")
+}
+
+export async function runCMD(CMDviewer, CMDrun, CMDrunStyle, CMDoutput, CMDoutputH1, clear_CMDoutput, c_CMDo, openDownload) {
   console.debug("`runCMD()` has been called!")
 
   CMDoutputH1.style.display = 'block';
   CMDoutput.style.display = 'block';
 
-  CMDrun.disabled = true;
   CMDrunStyle.style.backgroundColor = 'Gray';
   CMDrunStyle.style.borderColor = 'Gray';
 
-  await pywebview.api.runCMD(CMDviewer.value)
+  pywebview.api.runCMD(CMDviewer.value)
 
-  CMDrun.disabled = false;
+  CMDrun.dataset.running = "true";
+
+  console.debug("`runCMD()` is calling `runCMD_await()`!")
+
+  await runCMD_await(CMDrun, CMDrunStyle)
+
+  CMDrunStyle.style.display = 'none';
   CMDrunStyle.style.backgroundColor = 'Red';
   CMDrunStyle.style.borderColor = 'Red';
 
+  console.debug("`runCMD()` is calling `runCMD_clear()`!")
+
+  await runCMD_clear(clear_CMDoutput, c_CMDo, openDownload, CMDoutput, CMDoutputH1)
+
+  CMDrun.dataset.running = "false";
+  CMDrunStyle.style.display = 'inline-block';
+
   console.debug("`runCMD()` has ended!")
 }
+
+export function openDownload_sDirect(outputDirectInput) {
+  let path = '%USERPROFILE%\\'
+  
+  if (outputDirectInput.value) {
+    if (outputDirectInput.value.search("%(title)s") || outputDirectInput.value.search("%(ext)s")) {
+      path = outputDirectInput.value.substring(0, outputDirectInput.value.lastIndexOf("\\") + 1)
+      pywebview.state.isItFolder = true
+    } else {
+      path = outputDirectInput.value
+      pywebview.state.isItFolder = false
+    }
+  }
+
+  console.debug("`path` = ", path)
+  pywebview.api.openDownload_sDirect(path)
+}
+
+/*
+let jsLineOpen = '[Merger] Merging formats into \"C:\\Users\\USERNAME\\ThankYouForTesting.webm\"\n'
+let jsLO_Merger_rfind = jsLineOpen.lastIndexOf('[Merger]')
+let jsLO_MergerExtensionStart_rfind = jsLineOpen.lastIndexOf('.', jsLO_Merger_rfind)
+let jsLO_MergerExtensionEnd_find = jsLineOpen.indexOf('/\/', jsLO_MergerExtensionStart_rfind)
+let path = jsLineOpen.substring(jsLO_MergerExtensionStart_rfind, jsLO_MergerExtensionEnd_find)
+
+document.getElementById("demo").innerHTML = path;
+*/

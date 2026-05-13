@@ -7,8 +7,8 @@ VSVersionInfo(
   ffi=FixedFileInfo(
     # filevers and prodvers should be always a tuple with four items: (1, 2, 3, 4)
     # Set not needed items to zero 0. Must always contain 4 elements.
-    filevers=(0,1,1,101),
-    prodvers=(0,1,1,101),
+    filevers=(0,1,1,102),
+    prodvers=(0,1,1,102),
     # Contains a bitmask that specifies the valid bits 'flags'r
     mask=0x3f,
     # Contains a bitmask that specifies the Boolean attributes of the file.
@@ -32,12 +32,12 @@ VSVersionInfo(
         u'040904B0',
         [StringStruct(u'CompanyName', u'SubFabula'),
         StringStruct(u'FileDescription', u'"A feature-rich command-line audio/video downloader" "...with a simple graphical interface"'),
-        StringStruct(u'FileVersion', u'0.1.1.101'),
+        StringStruct(u'FileVersion', u'0.1.1.102'),
         StringStruct(u'InternalName', u'Auto Youtube Audio/Video Downloader Plus'),
         StringStruct(u'LegalCopyright', u'Created by SubFabula © 2025. License: Unlicense.'),
-        StringStruct(u'OriginalFilename', u'auto_yt_dlp'),
-        StringStruct(u'ProductName', u'auto_yt_dlp.exe'),
-        StringStruct(u'ProductVersion', u'0.1.1.101')])
+        StringStruct(u'OriginalFilename', u'auto_yt_dlp.exe'),
+        StringStruct(u'ProductName', u'auto_yt_dlp'),
+        StringStruct(u'ProductVersion', u'0.1.1.102')])
       ]), 
     VarFileInfo([VarStruct(u'Translation', [0x0409, 0x0809])])
   ]

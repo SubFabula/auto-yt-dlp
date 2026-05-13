@@ -20,6 +20,7 @@ window.addEventListener('pywebviewready', () => { // wait for pywebview
   const LOGGING = pywebview.state.LOGGING
 
   if (LOGGING === false) {
+    console.debug("Turning off logging in 1,5sec!")
     setTimeout(() => {
       console.log = function () {}
       console.debug = function () {}
@@ -57,6 +58,17 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   await checkThis()
 
+  /*
+  async function wait() { // make sure everything has loaded for a sec
+    console.debug("loading...")
+    await new Promise((resolve) => {
+     setTimeout(resolve, 1000); // 1sec
+    })
+  }
+
+  await wait()
+  */
+
   // Path\Name Output
   const outputDirectInput = document.getElementById('output_path_text');
   const outputDirectBrowse = document.getElementById('output_path_browse');
@@ -68,11 +80,26 @@ document.addEventListener('DOMContentLoaded', async () => {
   const CMDrunStyle = document.getElementById('command_run'); // Label of `#command_view_run` Input[Button]
   const CMDoutput = document.getElementById('command_output_text');
   const CMDoutputH1 = document.getElementById('command_output-h1');
+  const clear_CMDoutput = document.getElementById('clear_output');
+  const openDownload = document.getElementById('open_download');
 
   outputDirectInput.addEventListener('keyup', () => utils.update_oPathCMDview(CMDviewer, outputDirectInput));
   outputDirectBrowse.addEventListener('click', () => utils.open_file_dialog(outputDirectInput, CMDviewer));
   inputURL.addEventListener('keyup', () => utils.update_URLCMDview(CMDviewer, inputURL, utils.oPathEndIndex_CMDviewer));
-  CMDrun.addEventListener('click', () => utils.runCMD(CMDviewer, CMDrun, CMDrunStyle, CMDoutput, CMDoutputH1));
+  const c_CMDo = new Promise((resolve) => {
+    clear_CMDoutput.addEventListener('click', resolve, { once: true });
+  });
+  CMDrun.addEventListener('click', () => CMDrunORkill(CMDviewer, CMDrun, CMDrunStyle, CMDoutput, CMDoutputH1, clear_CMDoutput, c_CMDo, openDownload));
+  openDownload.addEventListener('mouseup', () => utils.openDownload_sDirect(outputDirectInput));
+
+  function CMDrunORkill(CMDviewer, CMDrun, CMDrunStyle, CMDoutput, CMDoutputH1, clear_CMDoutput, c_CMDo, openDownload) {
+    console.debug("`CMDrun.dataset.running` =", CMDrun.dataset.running)
+    if (CMDrun.dataset.running === "false") {
+      utils.runCMD(CMDviewer, CMDrun, CMDrunStyle, CMDoutput, CMDoutputH1, clear_CMDoutput, c_CMDo, openDownload)
+    } else if (CMDrun.dataset.running === "true") {
+      pywebview.state.kill_runCMD = "true"
+    }
+  }
 
   utils.update_oPathCMDview(CMDviewer, outputDirectInput) // running it once to set some variables
 
